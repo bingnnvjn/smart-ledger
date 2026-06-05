@@ -1,0 +1,28 @@
+[package]
+name = "smartledger"
+version = "0.1.0"
+edition = "2021"
+authors = ["Bingnnvjn"]
+description = "SmartLedger Core - AI智能记账助手核心库"
+
+[lib]
+name = "smartledger"
+crate-type = ["cdylib"]
+
+[dependencies]
+jni = "0.21"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.31", features = ["bundled"] }
+reqwest = { version = "0.11", features = ["json", "rustls-tls"], default-features = false }
+tokio = { version = "1", features = ["rt", "macros"] }
+thiserror = "1"
+anyhow = "1"
+chrono = "0.4"
+log = "0.4"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true

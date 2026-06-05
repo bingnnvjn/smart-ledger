@@ -1,0 +1,38 @@
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/app/release/
+
+# Rust
+rust/target/
+rust/Cargo.lock
+
+# JNI Libraries
+android/app/src/main/jniLibs/**/*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.apk
+*.aab
+*.jks
+*.keystore
